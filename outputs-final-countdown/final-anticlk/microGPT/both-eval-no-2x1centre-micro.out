@@ -1,0 +1,548 @@
+learning_rate=0.001
+weight_decay=0.0001
+trg_len=4
+eval_file='2x1-centre/eval-both-22-and-23-at-same-time.txt'
+evalBC_file=None
+eval_random_file=None
+Number of parameters in GPT2 model: 7M
+device=device(type='cuda')
+Reading 2x1-centre/train-no.txt...
+Reading of 2x1-centre/train-no.txt done!
+Reading 2x1-centre/eval-both-22-and-23-at-same-time.txt...
+Reading of 2x1-centre/eval-both-22-and-23-at-same-time.txt done!
+Converting to HuggingFace Dataset dictionary...
+Dataset created has 33390720 sequences, 13 unique words.
+Dataset created has 27000 sequences, 13 unique words.
+Converted to HuggingFace Dataset dictionary!
+Adding target labels...
+Added target labels!
+output_dir: final-anticlk-microGPT-no-2223-eval-both-22-and-23-ast
+overwrite_output_dir: False
+do_train: False
+do_eval: True
+do_predict: False
+evaluation_strategy: steps
+prediction_loss_only: False
+per_device_train_batch_size: 65536
+per_device_eval_batch_size: 65536
+per_gpu_train_batch_size: None
+per_gpu_eval_batch_size: None
+gradient_accumulation_steps: 1
+eval_accumulation_steps: 1
+eval_delay: 0
+learning_rate: 0.001
+weight_decay: 0.0001
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-08
+max_grad_norm: 1.0
+num_train_epochs: 25.0
+max_steps: -1
+lr_scheduler_type: linear
+lr_scheduler_kwargs: {}
+warmup_ratio: 0.0
+warmup_steps: 0
+log_level: info
+log_level_replica: warning
+log_on_each_node: True
+logging_dir: final-anticlk-microGPT-no-2223-eval-both-22-and-23-ast/runs/May15_20-22-13_gpu-q-1
+logging_strategy: steps
+logging_first_step: False
+logging_steps: 500
+logging_nan_inf_filter: True
+save_strategy: steps
+save_steps: 25
+save_total_limit: 2
+save_safetensors: True
+save_on_each_node: False
+save_only_model: False
+no_cuda: False
+use_cpu: False
+use_mps_device: False
+seed: 42
+data_seed: None
+jit_mode_eval: False
+use_ipex: False
+bf16: False
+fp16: True
+fp16_opt_level: O1
+half_precision_backend: auto
+bf16_full_eval: False
+fp16_full_eval: False
+tf32: None
+local_rank: 0
+ddp_backend: None
+tpu_num_cores: None
+tpu_metrics_debug: False
+debug: []
+dataloader_drop_last: False
+eval_steps: 25
+dataloader_num_workers: 0
+past_index: -1
+run_name: final-anticlk-microGPT-no-2223-eval-both-22-and-23-ast
+disable_tqdm: False
+remove_unused_columns: True
+label_names: None
+load_best_model_at_end: True
+metric_for_best_model: loss
+greater_is_better: False
+ignore_data_skip: False
+fsdp: []
+fsdp_min_num_params: 0
+fsdp_config: {'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False}
+fsdp_transformer_layer_cls_to_wrap: None
+deepspeed: None
+label_smoothing_factor: 0.0
+optim: adamw_torch
+optim_args: None
+adafactor: False
+group_by_length: False
+length_column_name: length
+report_to: ['wandb']
+ddp_find_unused_parameters: None
+ddp_bucket_cap_mb: None
+ddp_broadcast_buffers: None
+dataloader_pin_memory: True
+dataloader_persistent_workers: False
+skip_memory_metrics: True
+use_legacy_prediction_loop: False
+push_to_hub: False
+resume_from_checkpoint: None
+hub_model_id: None
+hub_strategy: every_save
+hub_token: None
+hub_private_repo: False
+hub_always_push: False
+gradient_checkpointing: False
+gradient_checkpointing_kwargs: None
+include_inputs_for_metrics: False
+fp16_backend: auto
+push_to_hub_model_id: None
+push_to_hub_organization: None
+push_to_hub_token: None
+mp_parameters: 
+auto_find_batch_size: False
+full_determinism: False
+torchdynamo: None
+ray_scope: last
+ddp_timeout: 1800
+torch_compile: False
+torch_compile_backend: None
+torch_compile_mode: None
+dispatch_batches: None
+split_batches: False
+include_tokens_per_second: False
+include_num_input_tokens_seen: False
+neftune_noise_alpha: None
+distributed_state: Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+_n_gpu: 1
+__cached__setup_devices: cuda:0
+deepspeed_plugin: None
+Time elapsed since training started:  0 Hours 05 Mins 44.265654 Sec
+Time elapsed since training started:  0 Hours 11 Mins 13.071579 Sec
+Time elapsed since training started:  0 Hours 16 Mins 41.890939 Sec
+Time elapsed since training started:  0 Hours 22 Mins 11.257115 Sec
+Time elapsed since training started:  0 Hours 27 Mins 31.787600 Sec
+Time elapsed since training started:  0 Hours 32 Mins 59.156604 Sec
+Time elapsed since training started:  0 Hours 38 Mins 28.213989 Sec
+Time elapsed since training started:  0 Hours 43 Mins 57.202355 Sec
+Time elapsed since training started:  0 Hours 49 Mins 26.416650 Sec
+Time elapsed since training started:  0 Hours 54 Mins 47.109139 Sec
+Time elapsed since training started:  1 Hours 00 Mins 15.538713 Sec
+Time elapsed since training started:  1 Hours 05 Mins 43.357061 Sec
+Time elapsed since training started:  1 Hours 11 Mins 12.468248 Sec
+Time elapsed since training started:  1 Hours 16 Mins 35.254974 Sec
+Time elapsed since training started:  1 Hours 22 Mins 04.932753 Sec
+Time elapsed since training started:  1 Hours 27 Mins 32.736865 Sec
+Time elapsed since training started:  1 Hours 33 Mins 01.390871 Sec
+Time elapsed since training started:  1 Hours 38 Mins 28.139811 Sec
+Time elapsed since training started:  1 Hours 43 Mins 45.782838 Sec
+{'loss': 0.8315, 'learning_rate': 0.0009607843137254903, 'epoch': 0.98}
+Time elapsed since training started:  1 Hours 49 Mins 12.324063 Sec
+Time elapsed since training started:  1 Hours 54 Mins 35.710556 Sec
+Time elapsed since training started:  2 Hours 00 Mins 04.101879 Sec
+Time elapsed since training started:  2 Hours 05 Mins 22.957058 Sec
+Time elapsed since training started:  2 Hours 10 Mins 49.766909 Sec
+Time elapsed since training started:  2 Hours 16 Mins 15.898222 Sec
+Time elapsed since training started:  2 Hours 21 Mins 42.180830 Sec
+Time elapsed since training started:  2 Hours 27 Mins 08.796704 Sec
+Time elapsed since training started:  2 Hours 32 Mins 27.438665 Sec
+Time elapsed since training started:  2 Hours 37 Mins 53.207602 Sec
+Time elapsed since training started:  2 Hours 43 Mins 18.951096 Sec
+Time elapsed since training started:  2 Hours 48 Mins 44.375660 Sec
+Time elapsed since training started:  2 Hours 54 Mins 01.998171 Sec
+Time elapsed since training started:  2 Hours 59 Mins 27.085332 Sec
+Time elapsed since training started:  3 Hours 04 Mins 51.872093 Sec
+Time elapsed since training started:  3 Hours 10 Mins 17.004599 Sec
+Time elapsed since training started:  3 Hours 15 Mins 42.675926 Sec
+Time elapsed since training started:  3 Hours 21 Mins 00.177637 Sec
+Time elapsed since training started:  3 Hours 26 Mins 26.389342 Sec
+Time elapsed since training started:  3 Hours 31 Mins 53.190554 Sec
+{'loss': 0.7966, 'learning_rate': 0.0009215686274509804, 'epoch': 1.96}
+Time elapsed since training started:  3 Hours 37 Mins 19.279621 Sec
+Time elapsed since training started:  3 Hours 42 Mins 33.517201 Sec
+Time elapsed since training started:  3 Hours 48 Mins 00.394444 Sec
+Time elapsed since training started:  3 Hours 53 Mins 27.303817 Sec
+Time elapsed since training started:  3 Hours 58 Mins 54.143317 Sec
+Time elapsed since training started:  4 Hours 04 Mins 13.250840 Sec
+Time elapsed since training started:  4 Hours 09 Mins 39.165218 Sec
+Time elapsed since training started:  4 Hours 15 Mins 06.396272 Sec
+Time elapsed since training started:  4 Hours 20 Mins 31.910481 Sec
+Time elapsed since training started:  4 Hours 25 Mins 58.676139 Sec
+Time elapsed since training started:  4 Hours 31 Mins 16.578673 Sec
+Time elapsed since training started:  4 Hours 36 Mins 42.179509 Sec
+Time elapsed since training started:  4 Hours 42 Mins 08.212137 Sec
+Time elapsed since training started:  4 Hours 47 Mins 35.200660 Sec
+Time elapsed since training started:  4 Hours 53 Mins 01.348893 Sec
+Time elapsed since training started:  4 Hours 58 Mins 19.783943 Sec
+Time elapsed since training started:  5 Hours 03 Mins 46.143911 Sec
+Time elapsed since training started:  5 Hours 09 Mins 11.492161 Sec
+Time elapsed since training started:  5 Hours 14 Mins 38.681899 Sec
+Time elapsed since training started:  5 Hours 19 Mins 57.239799 Sec
+{'loss': 0.4497, 'learning_rate': 0.0008823529411764706, 'epoch': 2.94}
+Time elapsed since training started:  5 Hours 25 Mins 23.782632 Sec
+Time elapsed since training started:  5 Hours 30 Mins 50.353716 Sec
+Time elapsed since training started:  5 Hours 36 Mins 14.410323 Sec
+Time elapsed since training started:  5 Hours 41 Mins 32.501118 Sec
+Time elapsed since training started:  5 Hours 46 Mins 58.394735 Sec
+Time elapsed since training started:  5 Hours 52 Mins 24.549139 Sec
+Time elapsed since training started:  5 Hours 57 Mins 51.401240 Sec
+Time elapsed since training started:  6 Hours 03 Mins 18.982652 Sec
+Time elapsed since training started:  6 Hours 08 Mins 37.033806 Sec
+Time elapsed since training started:  6 Hours 14 Mins 02.989387 Sec
+Time elapsed since training started:  6 Hours 19 Mins 27.699882 Sec
+Time elapsed since training started:  6 Hours 24 Mins 53.803245 Sec
+Time elapsed since training started:  6 Hours 30 Mins 11.969258 Sec
+Time elapsed since training started:  6 Hours 35 Mins 38.613160 Sec
+Time elapsed since training started:  6 Hours 41 Mins 12.482476 Sec
+Time elapsed since training started:  6 Hours 46 Mins 38.124345 Sec
+Time elapsed since training started:  6 Hours 52 Mins 04.022481 Sec
+Time elapsed since training started:  6 Hours 57 Mins 21.621934 Sec
+Time elapsed since training started:  7 Hours 02 Mins 47.309098 Sec
+Time elapsed since training started:  7 Hours 08 Mins 12.967158 Sec
+{'loss': 0.0961, 'learning_rate': 0.0008431372549019609, 'epoch': 3.92}
+Time elapsed since training started:  7 Hours 13 Mins 38.931207 Sec
+Time elapsed since training started:  7 Hours 18 Mins 56.389185 Sec
+Time elapsed since training started:  7 Hours 24 Mins 17.826424 Sec
+Time elapsed since training started:  7 Hours 29 Mins 44.491511 Sec
+Time elapsed since training started:  7 Hours 35 Mins 10.891411 Sec
+Time elapsed since training started:  7 Hours 40 Mins 37.066828 Sec
+Time elapsed since training started:  7 Hours 45 Mins 55.310773 Sec
+Time elapsed since training started:  7 Hours 51 Mins 22.465594 Sec
+Time elapsed since training started:  7 Hours 56 Mins 48.429359 Sec
+Time elapsed since training started:  8 Hours 02 Mins 14.234658 Sec
+Time elapsed since training started:  8 Hours 07 Mins 31.835267 Sec
+Time elapsed since training started:  8 Hours 12 Mins 57.108430 Sec
+Time elapsed since training started:  8 Hours 18 Mins 22.327087 Sec
+Time elapsed since training started:  8 Hours 23 Mins 48.752821 Sec
+Time elapsed since training started:  8 Hours 29 Mins 14.182959 Sec
+Time elapsed since training started:  8 Hours 34 Mins 31.677004 Sec
+Time elapsed since training started:  8 Hours 39 Mins 57.327301 Sec
+Time elapsed since training started:  8 Hours 45 Mins 23.492115 Sec
+Time elapsed since training started:  8 Hours 50 Mins 48.618268 Sec
+Time elapsed since training started:  8 Hours 56 Mins 09.641341 Sec
+{'loss': 0.0667, 'learning_rate': 0.000803921568627451, 'epoch': 4.9}
+Time elapsed since training started:  9 Hours 01 Mins 37.455746 Sec
+Time elapsed since training started:  9 Hours 07 Mins 03.593799 Sec
+Time elapsed since training started:  9 Hours 12 Mins 11.553228 Sec
+Time elapsed since training started:  9 Hours 17 Mins 50.197524 Sec
+Time elapsed since training started:  9 Hours 23 Mins 07.638165 Sec
+Time elapsed since training started:  9 Hours 28 Mins 32.922758 Sec
+Time elapsed since training started:  9 Hours 33 Mins 58.117560 Sec
+Time elapsed since training started:  9 Hours 39 Mins 22.960975 Sec
+Time elapsed since training started:  9 Hours 44 Mins 40.450423 Sec
+Time elapsed since training started:  9 Hours 50 Mins 04.584481 Sec
+Time elapsed since training started:  9 Hours 55 Mins 29.393414 Sec
+Time elapsed since training started:  10 Hours 00 Mins 54.202712 Sec
+Time elapsed since training started:  10 Hours 06 Mins 20.122079 Sec
+Time elapsed since training started:  10 Hours 11 Mins 39.809326 Sec
+Time elapsed since training started:  10 Hours 17 Mins 06.172553 Sec
+Time elapsed since training started:  10 Hours 22 Mins 46.918504 Sec
+Time elapsed since training started:  10 Hours 28 Mins 12.668217 Sec
+Time elapsed since training started:  10 Hours 33 Mins 30.337524 Sec
+Time elapsed since training started:  10 Hours 38 Mins 55.498115 Sec
+Time elapsed since training started:  10 Hours 44 Mins 20.882375 Sec
+{'loss': 0.0556, 'learning_rate': 0.0007647058823529411, 'epoch': 5.88}
+Time elapsed since training started:  10 Hours 49 Mins 46.721255 Sec
+Time elapsed since training started:  10 Hours 55 Mins 12.205047 Sec
+Time elapsed since training started:  11 Hours 00 Mins 30.240811 Sec
+Time elapsed since training started:  11 Hours 05 Mins 52.459689 Sec
+Time elapsed since training started:  11 Hours 11 Mins 19.027346 Sec
+Time elapsed since training started:  11 Hours 16 Mins 47.314489 Sec
+Time elapsed since training started:  11 Hours 22 Mins 05.547846 Sec
+Time elapsed since training started:  11 Hours 27 Mins 31.992398 Sec
+Time elapsed since training started:  11 Hours 32 Mins 58.038053 Sec
+Time elapsed since training started:  11 Hours 38 Mins 24.131311 Sec
+Time elapsed since training started:  11 Hours 43 Mins 50.984223 Sec
+Time elapsed since training started:  11 Hours 49 Mins 09.167778 Sec
+Time elapsed since training started:  11 Hours 54 Mins 34.908529 Sec
+Time elapsed since training started:  12 Hours 00 Mins 00.190268 Sec
+Time elapsed since training started:  12 Hours 05 Mins 26.307999 Sec
+Time elapsed since training started:  12 Hours 10 Mins 45.502847 Sec
+Time elapsed since training started:  12 Hours 16 Mins 11.352445 Sec
+Time elapsed since training started:  12 Hours 21 Mins 37.116700 Sec
+Time elapsed since training started:  12 Hours 27 Mins 03.277735 Sec
+Time elapsed since training started:  12 Hours 32 Mins 29.195213 Sec
+{'loss': 0.0489, 'learning_rate': 0.0007254901960784313, 'epoch': 6.86}
+Time elapsed since training started:  12 Hours 37 Mins 47.490325 Sec
+Time elapsed since training started:  12 Hours 43 Mins 16.650689 Sec
+Time elapsed since training started:  12 Hours 48 Mins 45.484547 Sec
+Time elapsed since training started:  12 Hours 54 Mins 08.984128 Sec
+Time elapsed since training started:  12 Hours 59 Mins 28.361676 Sec
+Time elapsed since training started:  13 Hours 04 Mins 53.967454 Sec
+Time elapsed since training started:  13 Hours 10 Mins 20.918836 Sec
+Time elapsed since training started:  13 Hours 15 Mins 46.893945 Sec
+Time elapsed since training started:  13 Hours 21 Mins 04.615145 Sec
+Time elapsed since training started:  13 Hours 26 Mins 32.268059 Sec
+Time elapsed since training started:  13 Hours 32 Mins 00.704229 Sec
+Time elapsed since training started:  13 Hours 37 Mins 30.176981 Sec
+Time elapsed since training started:  13 Hours 42 Mins 58.776631 Sec
+Time elapsed since training started:  13 Hours 48 Mins 18.988826 Sec
+Time elapsed since training started:  13 Hours 53 Mins 46.594331 Sec
+Time elapsed since training started:  13 Hours 59 Mins 14.647798 Sec
+Time elapsed since training started:  14 Hours 04 Mins 42.748149 Sec
+Time elapsed since training started:  14 Hours 10 Mins 10.973462 Sec
+Time elapsed since training started:  14 Hours 15 Mins 31.235065 Sec
+Time elapsed since training started:  14 Hours 21 Mins 00.170604 Sec
+{'loss': 0.0443, 'learning_rate': 0.0006862745098039216, 'epoch': 7.84}
+Time elapsed since training started:  14 Hours 26 Mins 27.788168 Sec
+Time elapsed since training started:  14 Hours 31 Mins 55.174875 Sec
+Time elapsed since training started:  14 Hours 37 Mins 14.719971 Sec
+Time elapsed since training started:  14 Hours 42 Mins 42.086248 Sec
+Time elapsed since training started:  14 Hours 48 Mins 07.265317 Sec
+Time elapsed since training started:  14 Hours 53 Mins 35.871027 Sec
+Time elapsed since training started:  14 Hours 58 Mins 56.259040 Sec
+Time elapsed since training started:  15 Hours 04 Mins 24.068311 Sec
+Time elapsed since training started:  15 Hours 09 Mins 52.466559 Sec
+Time elapsed since training started:  15 Hours 15 Mins 20.298496 Sec
+Time elapsed since training started:  15 Hours 20 Mins 47.640305 Sec
+Time elapsed since training started:  15 Hours 26 Mins 07.910261 Sec
+Time elapsed since training started:  15 Hours 31 Mins 35.099845 Sec
+Time elapsed since training started:  15 Hours 37 Mins 02.733228 Sec
+Time elapsed since training started:  15 Hours 42 Mins 30.842365 Sec
+Time elapsed since training started:  15 Hours 47 Mins 51.275855 Sec
+Time elapsed since training started:  15 Hours 53 Mins 20.019433 Sec
+Time elapsed since training started:  15 Hours 58 Mins 49.855464 Sec
+Time elapsed since training started:  16 Hours 04 Mins 16.477490 Sec
+Time elapsed since training started:  16 Hours 09 Mins 42.859522 Sec
+{'loss': 0.0409, 'learning_rate': 0.0006470588235294118, 'epoch': 8.82}
+Time elapsed since training started:  16 Hours 15 Mins 01.029577 Sec
+Time elapsed since training started:  16 Hours 20 Mins 27.983453 Sec
+Time elapsed since training started:  16 Hours 25 Mins 55.331758 Sec
+Time elapsed since training started:  16 Hours 31 Mins 22.616695 Sec
+Time elapsed since training started:  16 Hours 36 Mins 37.717809 Sec
+Time elapsed since training started:  16 Hours 42 Mins 05.531468 Sec
+Time elapsed since training started:  16 Hours 47 Mins 32.605153 Sec
+Time elapsed since training started:  16 Hours 52 Mins 59.960716 Sec
+Time elapsed since training started:  16 Hours 58 Mins 27.354526 Sec
+Time elapsed since training started:  17 Hours 03 Mins 46.613019 Sec
+Time elapsed since training started:  17 Hours 09 Mins 13.237529 Sec
+Time elapsed since training started:  17 Hours 14 Mins 40.236195 Sec
+Time elapsed since training started:  17 Hours 20 Mins 07.065761 Sec
+Time elapsed since training started:  17 Hours 25 Mins 26.271887 Sec
+Time elapsed since training started:  17 Hours 30 Mins 53.241420 Sec
+Time elapsed since training started:  17 Hours 36 Mins 20.785873 Sec
+Time elapsed since training started:  17 Hours 41 Mins 48.803908 Sec
+Time elapsed since training started:  17 Hours 47 Mins 16.828865 Sec
+Time elapsed since training started:  17 Hours 52 Mins 35.746499 Sec
+Time elapsed since training started:  17 Hours 58 Mins 02.967342 Sec
+{'loss': 0.0383, 'learning_rate': 0.0006078431372549019, 'epoch': 9.8}
+Time elapsed since training started:  18 Hours 03 Mins 27.273223 Sec
+Time elapsed since training started:  18 Hours 08 Mins 50.560293 Sec
+Time elapsed since training started:  18 Hours 14 Mins 05.197483 Sec
+Time elapsed since training started:  18 Hours 19 Mins 28.585090 Sec
+Time elapsed since training started:  18 Hours 24 Mins 35.245971 Sec
+Time elapsed since training started:  18 Hours 30 Mins 12.507389 Sec
+Time elapsed since training started:  18 Hours 35 Mins 37.673362 Sec
+Time elapsed since training started:  18 Hours 40 Mins 55.707556 Sec
+Time elapsed since training started:  18 Hours 46 Mins 22.044643 Sec
+Time elapsed since training started:  18 Hours 51 Mins 49.910746 Sec
+Time elapsed since training started:  18 Hours 57 Mins 18.860219 Sec
+Time elapsed since training started:  19 Hours 02 Mins 39.216969 Sec
+Time elapsed since training started:  19 Hours 08 Mins 06.731316 Sec
+Time elapsed since training started:  19 Hours 13 Mins 36.149044 Sec
+Time elapsed since training started:  19 Hours 19 Mins 03.365165 Sec
+Time elapsed since training started:  19 Hours 24 Mins 30.410521 Sec
+Time elapsed since training started:  19 Hours 29 Mins 49.848495 Sec
+Time elapsed since training started:  19 Hours 35 Mins 16.259722 Sec
+Time elapsed since training started:  19 Hours 40 Mins 42.943853 Sec
+Time elapsed since training started:  19 Hours 46 Mins 09.871809 Sec
+{'loss': 0.0361, 'learning_rate': 0.0005686274509803922, 'epoch': 10.78}
+Time elapsed since training started:  19 Hours 51 Mins 28.488836 Sec
+Time elapsed since training started:  19 Hours 56 Mins 54.102720 Sec
+Time elapsed since training started:  20 Hours 02 Mins 19.989445 Sec
+Time elapsed since training started:  20 Hours 07 Mins 45.800996 Sec
+Time elapsed since training started:  20 Hours 13 Mins 12.318737 Sec
+Time elapsed since training started:  20 Hours 18 Mins 27.342585 Sec
+Time elapsed since training started:  20 Hours 23 Mins 55.304973 Sec
+Time elapsed since training started:  20 Hours 29 Mins 23.965152 Sec
+Time elapsed since training started:  20 Hours 34 Mins 52.681839 Sec
+Time elapsed since training started:  20 Hours 40 Mins 13.244674 Sec
+Time elapsed since training started:  20 Hours 45 Mins 41.370466 Sec
+Time elapsed since training started:  20 Hours 51 Mins 10.131450 Sec
+Time elapsed since training started:  20 Hours 56 Mins 38.945475 Sec
+Time elapsed since training started:  21 Hours 02 Mins 08.225037 Sec
+Time elapsed since training started:  21 Hours 07 Mins 29.398345 Sec
+Time elapsed since training started:  21 Hours 13 Mins 04.171216 Sec
+Time elapsed since training started:  21 Hours 18 Mins 49.388070 Sec
+Time elapsed since training started:  21 Hours 24 Mins 18.574690 Sec
+Time elapsed since training started:  21 Hours 29 Mins 38.958422 Sec
+Time elapsed since training started:  21 Hours 35 Mins 06.447792 Sec
+{'loss': 0.0344, 'learning_rate': 0.0005294117647058824, 'epoch': 11.76}
+Time elapsed since training started:  21 Hours 40 Mins 34.442007 Sec
+Time elapsed since training started:  21 Hours 46 Mins 13.593573 Sec
+Time elapsed since training started:  21 Hours 51 Mins 42.671824 Sec
+Time elapsed since training started:  21 Hours 57 Mins 12.638661 Sec
+Time elapsed since training started:  22 Hours 02 Mins 47.997855 Sec
+Time elapsed since training started:  22 Hours 08 Mins 12.631755 Sec
+Time elapsed since training started:  22 Hours 13 Mins 41.430613 Sec
+Time elapsed since training started:  22 Hours 19 Mins 01.951762 Sec
+Time elapsed since training started:  22 Hours 24 Mins 29.271714 Sec
+Time elapsed since training started:  22 Hours 29 Mins 56.660302 Sec
+Time elapsed since training started:  22 Hours 35 Mins 23.655979 Sec
+Time elapsed since training started:  22 Hours 40 Mins 51.302669 Sec
+Time elapsed since training started:  22 Hours 46 Mins 10.643548 Sec
+Time elapsed since training started:  22 Hours 51 Mins 37.489498 Sec
+Time elapsed since training started:  22 Hours 57 Mins 04.004397 Sec
+Time elapsed since training started:  23 Hours 02 Mins 29.543950 Sec
+Time elapsed since training started:  23 Hours 07 Mins 45.711522 Sec
+Time elapsed since training started:  23 Hours 13 Mins 10.900782 Sec
+Time elapsed since training started:  23 Hours 18 Mins 34.366484 Sec
+Time elapsed since training started:  23 Hours 23 Mins 57.508186 Sec
+{'loss': 0.0329, 'learning_rate': 0.0004901960784313725, 'epoch': 12.75}
+Time elapsed since training started:  23 Hours 29 Mins 20.413903 Sec
+Time elapsed since training started:  23 Hours 34 Mins 36.008368 Sec
+Time elapsed since training started:  23 Hours 40 Mins 00.992520 Sec
+Time elapsed since training started:  23 Hours 45 Mins 25.258093 Sec
+Time elapsed since training started:  23 Hours 50 Mins 49.290317 Sec
+Time elapsed since training started:  23 Hours 56 Mins 05.037248 Sec
+Time elapsed since training started:  1 day, 0 Hours 01 Mins 26.068246 Sec
+Time elapsed since training started:  1 day, 0 Hours 06 Mins 50.160269 Sec
+Time elapsed since training started:  1 day, 0 Hours 12 Mins 15.005384 Sec
+Time elapsed since training started:  1 day, 0 Hours 17 Mins 31.629017 Sec
+Time elapsed since training started:  1 day, 0 Hours 22 Mins 57.890394 Sec
+Time elapsed since training started:  1 day, 0 Hours 28 Mins 23.380650 Sec
+Time elapsed since training started:  1 day, 0 Hours 33 Mins 48.125176 Sec
+Time elapsed since training started:  1 day, 0 Hours 39 Mins 13.932369 Sec
+Time elapsed since training started:  1 day, 0 Hours 44 Mins 31.475948 Sec
+Time elapsed since training started:  1 day, 0 Hours 49 Mins 56.525294 Sec
+Time elapsed since training started:  1 day, 0 Hours 55 Mins 21.162971 Sec
+Time elapsed since training started:  1 day, 1 Hours 00 Mins 46.022143 Sec
+Time elapsed since training started:  1 day, 1 Hours 06 Mins 02.927024 Sec
+Time elapsed since training started:  1 day, 1 Hours 11 Mins 27.506545 Sec
+{'loss': 0.0316, 'learning_rate': 0.0004509803921568628, 'epoch': 13.73}
+Time elapsed since training started:  1 day, 1 Hours 16 Mins 52.677059 Sec
+Time elapsed since training started:  1 day, 1 Hours 22 Mins 18.119219 Sec
+Time elapsed since training started:  1 day, 1 Hours 27 Mins 43.621621 Sec
+Time elapsed since training started:  1 day, 1 Hours 33 Mins 02.073876 Sec
+Time elapsed since training started:  1 day, 1 Hours 38 Mins 27.271201 Sec
+Time elapsed since training started:  1 day, 1 Hours 43 Mins 51.868413 Sec
+Time elapsed since training started:  1 day, 1 Hours 49 Mins 13.060660 Sec
+Time elapsed since training started:  1 day, 1 Hours 54 Mins 31.018122 Sec
+Time elapsed since training started:  1 day, 1 Hours 59 Mins 56.657925 Sec
+Time elapsed since training started:  1 day, 2 Hours 05 Mins 22.036872 Sec
+Time elapsed since training started:  1 day, 2 Hours 10 Mins 47.686918 Sec
+Time elapsed since training started:  1 day, 2 Hours 16 Mins 13.407365 Sec
+Time elapsed since training started:  1 day, 2 Hours 21 Mins 30.818886 Sec
+Time elapsed since training started:  1 day, 2 Hours 26 Mins 55.927447 Sec
+Time elapsed since training started:  1 day, 2 Hours 32 Mins 20.111552 Sec
+Time elapsed since training started:  1 day, 2 Hours 37 Mins 43.402979 Sec
+Time elapsed since training started:  1 day, 2 Hours 42 Mins 59.804259 Sec
+Time elapsed since training started:  1 day, 2 Hours 48 Mins 24.949939 Sec
+Time elapsed since training started:  1 day, 2 Hours 53 Mins 49.178989 Sec
+Time elapsed since training started:  1 day, 2 Hours 59 Mins 13.921478 Sec
+{'loss': 0.0306, 'learning_rate': 0.0004117647058823529, 'epoch': 14.71}
+Time elapsed since training started:  1 day, 3 Hours 04 Mins 40.415127 Sec
+Time elapsed since training started:  1 day, 3 Hours 10 Mins 00.990522 Sec
+Time elapsed since training started:  1 day, 3 Hours 15 Mins 29.273347 Sec
+Time elapsed since training started:  1 day, 3 Hours 20 Mins 56.313796 Sec
+Time elapsed since training started:  1 day, 3 Hours 26 Mins 22.918041 Sec
+Time elapsed since training started:  1 day, 3 Hours 31 Mins 40.433080 Sec
+Time elapsed since training started:  1 day, 3 Hours 36 Mins 47.569209 Sec
+Time elapsed since training started:  1 day, 3 Hours 42 Mins 26.610783 Sec
+Time elapsed since training started:  1 day, 3 Hours 47 Mins 53.042619 Sec
+Time elapsed since training started:  1 day, 3 Hours 53 Mins 17.342373 Sec
+Time elapsed since training started:  1 day, 3 Hours 58 Mins 38.353562 Sec
+Time elapsed since training started:  1 day, 4 Hours 04 Mins 03.994351 Sec
+Time elapsed since training started:  1 day, 4 Hours 09 Mins 30.788479 Sec
+Time elapsed since training started:  1 day, 4 Hours 15 Mins 00.123636 Sec
+Time elapsed since training started:  1 day, 4 Hours 20 Mins 21.263958 Sec
+Time elapsed since training started:  1 day, 4 Hours 25 Mins 50.172102 Sec
+Time elapsed since training started:  1 day, 4 Hours 31 Mins 18.927790 Sec
+Time elapsed since training started:  1 day, 4 Hours 36 Mins 47.727957 Sec
+Time elapsed since training started:  1 day, 4 Hours 42 Mins 16.402086 Sec
+Time elapsed since training started:  1 day, 4 Hours 47 Mins 36.218282 Sec
+{'loss': 0.0296, 'learning_rate': 0.00037254901960784314, 'epoch': 15.69}
+Time elapsed since training started:  1 day, 4 Hours 53 Mins 03.932916 Sec
+Time elapsed since training started:  1 day, 4 Hours 58 Mins 32.109731 Sec
+Time elapsed since training started:  1 day, 5 Hours 04 Mins 00.015507 Sec
+Time elapsed since training started:  1 day, 5 Hours 09 Mins 19.158437 Sec
+Time elapsed since training started:  1 day, 5 Hours 14 Mins 46.856117 Sec
+Time elapsed since training started:  1 day, 5 Hours 20 Mins 13.482992 Sec
+Time elapsed since training started:  1 day, 5 Hours 25 Mins 37.212340 Sec
+Time elapsed since training started:  1 day, 5 Hours 30 Mins 57.919248 Sec
+Time elapsed since training started:  1 day, 5 Hours 36 Mins 14.522374 Sec
+Time elapsed since training started:  1 day, 5 Hours 41 Mins 40.621090 Sec
+Time elapsed since training started:  1 day, 5 Hours 47 Mins 05.657608 Sec
+Time elapsed since training started:  1 day, 5 Hours 52 Mins 30.676068 Sec
+Time elapsed since training started:  1 day, 5 Hours 57 Mins 48.433196 Sec
+Time elapsed since training started:  1 day, 6 Hours 03 Mins 15.167958 Sec
+Time elapsed since training started:  1 day, 6 Hours 08 Mins 41.909110 Sec
+Time elapsed since training started:  1 day, 6 Hours 14 Mins 08.712331 Sec
+Time elapsed since training started:  1 day, 6 Hours 19 Mins 35.450478 Sec
+Time elapsed since training started:  1 day, 6 Hours 24 Mins 52.996151 Sec
+Time elapsed since training started:  1 day, 6 Hours 30 Mins 16.483240 Sec
+Time elapsed since training started:  1 day, 6 Hours 35 Mins 38.676281 Sec
+{'loss': 0.0288, 'learning_rate': 0.0003333333333333333, 'epoch': 16.67}
+Time elapsed since training started:  1 day, 6 Hours 41 Mins 03.050157 Sec
+Time elapsed since training started:  1 day, 6 Hours 46 Mins 19.818408 Sec
+Time elapsed since training started:  1 day, 6 Hours 51 Mins 44.263346 Sec
+Time elapsed since training started:  1 day, 6 Hours 57 Mins 11.731486 Sec
+Time elapsed since training started:  1 day, 7 Hours 02 Mins 37.156837 Sec
+Time elapsed since training started:  1 day, 7 Hours 08 Mins 02.036657 Sec
+Time elapsed since training started:  1 day, 7 Hours 13 Mins 17.981411 Sec
+Time elapsed since training started:  1 day, 7 Hours 18 Mins 38.173776 Sec
+Time elapsed since training started:  1 day, 7 Hours 24 Mins 03.476878 Sec
+Time elapsed since training started:  1 day, 7 Hours 29 Mins 27.925429 Sec
+Time elapsed since training started:  1 day, 7 Hours 34 Mins 44.170102 Sec
+Time elapsed since training started:  1 day, 7 Hours 40 Mins 08.744462 Sec
+Time elapsed since training started:  1 day, 7 Hours 45 Mins 33.472925 Sec
+Time elapsed since training started:  1 day, 7 Hours 50 Mins 58.209616 Sec
+Time elapsed since training started:  1 day, 7 Hours 56 Mins 22.842561 Sec
+Time elapsed since training started:  1 day, 8 Hours 01 Mins 39.341605 Sec
+Time elapsed since training started:  1 day, 8 Hours 07 Mins 03.651284 Sec
+Time elapsed since training started:  1 day, 8 Hours 12 Mins 28.292005 Sec
+Time elapsed since training started:  1 day, 8 Hours 17 Mins 52.009151 Sec
+Time elapsed since training started:  1 day, 8 Hours 23 Mins 08.999983 Sec
+{'loss': 0.028, 'learning_rate': 0.00029411764705882356, 'epoch': 17.65}
+Time elapsed since training started:  1 day, 8 Hours 28 Mins 35.245376 Sec
+Time elapsed since training started:  1 day, 8 Hours 34 Mins 00.525940 Sec
+Time elapsed since training started:  1 day, 8 Hours 39 Mins 25.200627 Sec
+Time elapsed since training started:  1 day, 8 Hours 44 Mins 52.660089 Sec
+Time elapsed since training started:  1 day, 8 Hours 50 Mins 12.190360 Sec
+Time elapsed since training started:  1 day, 8 Hours 55 Mins 37.975178 Sec
+Time elapsed since training started:  1 day, 9 Hours 01 Mins 04.847966 Sec
+Time elapsed since training started:  1 day, 9 Hours 06 Mins 32.008525 Sec
+Time elapsed since training started:  1 day, 9 Hours 11 Mins 46.607506 Sec
+Time elapsed since training started:  1 day, 9 Hours 17 Mins 12.062809 Sec
+Time elapsed since training started:  1 day, 9 Hours 22 Mins 37.487553 Sec
+Time elapsed since training started:  1 day, 9 Hours 28 Mins 03.513125 Sec
+Time elapsed since training started:  1 day, 9 Hours 33 Mins 20.001289 Sec
+Time elapsed since training started:  1 day, 9 Hours 38 Mins 44.872063 Sec
+Time elapsed since training started:  1 day, 9 Hours 44 Mins 10.153103 Sec
+Time elapsed since training started:  1 day, 9 Hours 49 Mins 35.236768 Sec
+Time elapsed since training started:  1 day, 9 Hours 55 Mins 00.351427 Sec
+Time elapsed since training started:  1 day, 10 Hours 00 Mins 16.749877 Sec
+Time elapsed since training started:  1 day, 10 Hours 05 Mins 41.317760 Sec
+Time elapsed since training started:  1 day, 10 Hours 11 Mins 05.751198 Sec
+{'loss': 0.0273, 'learning_rate': 0.00025490196078431374, 'epoch': 18.63}
+Time elapsed since training started:  1 day, 10 Hours 16 Mins 30.814932 Sec
+Time elapsed since training started:  1 day, 10 Hours 21 Mins 47.386060 Sec
+Time elapsed since training started:  1 day, 10 Hours 27 Mins 12.311742 Sec
+Time elapsed since training started:  1 day, 10 Hours 32 Mins 37.341508 Sec
+Time elapsed since training started:  1 day, 10 Hours 38 Mins 02.539046 Sec

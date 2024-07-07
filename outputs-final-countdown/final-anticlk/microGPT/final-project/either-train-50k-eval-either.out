@@ -1,0 +1,557 @@
+learning_rate=0.001
+weight_decay=0.0001
+num_training_epochs=10.0
+trg_len=4
+eval_file='2x1-centre/eval-either-22-or-23.txt'
+evalBC_file=None
+eval_random_file=None
+Number of parameters in GPT2 model: 7M
+device=device(type='cuda')
+Reading 2x1-centre/train-50k-either-22-or-23.txt...
+Reading of 2x1-centre/train-50k-either-22-or-23.txt done!
+Reading 2x1-centre/eval-either-22-or-23.txt...
+Reading of 2x1-centre/eval-either-22-or-23.txt done!
+Converting to HuggingFace Dataset dictionary...
+Dataset created has 33440720 sequences, 13 unique words.
+Dataset created has 27000 sequences, 13 unique words.
+Converted to HuggingFace Dataset dictionary!
+Adding target labels...
+Added target labels!
+output_dir: report-final-microGPT-either-50k-eval-either
+overwrite_output_dir: False
+do_train: False
+do_eval: True
+do_predict: False
+evaluation_strategy: steps
+prediction_loss_only: False
+per_device_train_batch_size: 65536
+per_device_eval_batch_size: 65536
+per_gpu_train_batch_size: None
+per_gpu_eval_batch_size: None
+gradient_accumulation_steps: 1
+eval_accumulation_steps: 1
+eval_delay: 0
+learning_rate: 0.001
+weight_decay: 0.0001
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-08
+max_grad_norm: 1.0
+num_train_epochs: 10.0
+max_steps: -1
+lr_scheduler_type: linear
+lr_scheduler_kwargs: {}
+warmup_ratio: 0.0
+warmup_steps: 0
+log_level: info
+log_level_replica: warning
+log_on_each_node: True
+logging_dir: report-final-microGPT-either-50k-eval-either/runs/May20_05-51-27_gpu-q-37
+logging_strategy: steps
+logging_first_step: False
+logging_steps: 25
+logging_nan_inf_filter: True
+save_strategy: steps
+save_steps: 25
+save_total_limit: 2
+save_safetensors: True
+save_on_each_node: False
+save_only_model: False
+no_cuda: False
+use_cpu: False
+use_mps_device: False
+seed: 42
+data_seed: None
+jit_mode_eval: False
+use_ipex: False
+bf16: False
+fp16: True
+fp16_opt_level: O1
+half_precision_backend: auto
+bf16_full_eval: False
+fp16_full_eval: False
+tf32: None
+local_rank: 0
+ddp_backend: None
+tpu_num_cores: None
+tpu_metrics_debug: False
+debug: []
+dataloader_drop_last: False
+eval_steps: 25
+dataloader_num_workers: 0
+past_index: -1
+run_name: report-final-microGPT-either-50k-eval-either
+disable_tqdm: False
+remove_unused_columns: True
+label_names: None
+load_best_model_at_end: True
+metric_for_best_model: loss
+greater_is_better: False
+ignore_data_skip: False
+fsdp: []
+fsdp_min_num_params: 0
+fsdp_config: {'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False}
+fsdp_transformer_layer_cls_to_wrap: None
+deepspeed: None
+label_smoothing_factor: 0.0
+optim: adamw_torch
+optim_args: None
+adafactor: False
+group_by_length: False
+length_column_name: length
+report_to: ['wandb']
+ddp_find_unused_parameters: None
+ddp_bucket_cap_mb: None
+ddp_broadcast_buffers: None
+dataloader_pin_memory: True
+dataloader_persistent_workers: False
+skip_memory_metrics: True
+use_legacy_prediction_loop: False
+push_to_hub: False
+resume_from_checkpoint: None
+hub_model_id: None
+hub_strategy: every_save
+hub_token: None
+hub_private_repo: False
+hub_always_push: False
+gradient_checkpointing: False
+gradient_checkpointing_kwargs: None
+include_inputs_for_metrics: False
+fp16_backend: auto
+push_to_hub_model_id: None
+push_to_hub_organization: None
+push_to_hub_token: None
+mp_parameters: 
+auto_find_batch_size: False
+full_determinism: False
+torchdynamo: None
+ray_scope: last
+ddp_timeout: 1800
+torch_compile: False
+torch_compile_backend: None
+torch_compile_mode: None
+dispatch_batches: None
+split_batches: False
+include_tokens_per_second: False
+include_num_input_tokens_seen: False
+neftune_noise_alpha: None
+distributed_state: Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+_n_gpu: 1
+__cached__setup_devices: cuda:0
+deepspeed_plugin: None
+{'loss': 1.3437, 'learning_rate': 0.0009951076320939335, 'epoch': 0.05}
+Time elapsed since training started:  0 Hours 05 Mins 37.340539 Sec
+{'loss': 0.8666, 'learning_rate': 0.000990215264187867, 'epoch': 0.1}
+Time elapsed since training started:  0 Hours 11 Mins 00.235222 Sec
+{'loss': 0.8243, 'learning_rate': 0.0009853228962818004, 'epoch': 0.15}
+Time elapsed since training started:  0 Hours 16 Mins 23.594281 Sec
+{'loss': 0.8151, 'learning_rate': 0.0009804305283757338, 'epoch': 0.2}
+Time elapsed since training started:  0 Hours 21 Mins 46.922101 Sec
+{'loss': 0.8112, 'learning_rate': 0.0009755381604696674, 'epoch': 0.24}
+Time elapsed since training started:  0 Hours 27 Mins 02.455183 Sec
+{'loss': 0.8087, 'learning_rate': 0.0009706457925636007, 'epoch': 0.29}
+Time elapsed since training started:  0 Hours 32 Mins 25.849460 Sec
+{'loss': 0.8068, 'learning_rate': 0.0009657534246575343, 'epoch': 0.34}
+Time elapsed since training started:  0 Hours 37 Mins 51.419198 Sec
+{'loss': 0.8051, 'learning_rate': 0.0009608610567514677, 'epoch': 0.39}
+Time elapsed since training started:  0 Hours 43 Mins 14.358251 Sec
+{'loss': 0.8036, 'learning_rate': 0.0009559686888454013, 'epoch': 0.44}
+Time elapsed since training started:  0 Hours 48 Mins 38.098544 Sec
+{'loss': 0.8025, 'learning_rate': 0.0009510763209393346, 'epoch': 0.49}
+Time elapsed since training started:  0 Hours 53 Mins 54.483618 Sec
+{'loss': 0.8015, 'learning_rate': 0.000946183953033268, 'epoch': 0.54}
+Time elapsed since training started:  0 Hours 59 Mins 21.478963 Sec
+{'loss': 0.8008, 'learning_rate': 0.0009412915851272016, 'epoch': 0.59}
+Time elapsed since training started:  1 Hours 04 Mins 49.109399 Sec
+{'loss': 0.8001, 'learning_rate': 0.000936399217221135, 'epoch': 0.64}
+Time elapsed since training started:  1 Hours 10 Mins 15.169479 Sec
+{'loss': 0.7993, 'learning_rate': 0.0009315068493150685, 'epoch': 0.68}
+Time elapsed since training started:  1 Hours 15 Mins 32.866249 Sec
+{'loss': 0.7992, 'learning_rate': 0.0009266144814090019, 'epoch': 0.73}
+Time elapsed since training started:  1 Hours 20 Mins 56.344209 Sec
+{'loss': 0.7988, 'learning_rate': 0.0009217221135029355, 'epoch': 0.78}
+Time elapsed since training started:  1 Hours 26 Mins 19.591688 Sec
+{'loss': 0.7985, 'learning_rate': 0.0009168297455968689, 'epoch': 0.83}
+Time elapsed since training started:  1 Hours 31 Mins 43.021548 Sec
+{'loss': 0.798, 'learning_rate': 0.0009119373776908023, 'epoch': 0.88}
+Time elapsed since training started:  1 Hours 37 Mins 06.317083 Sec
+{'loss': 0.798, 'learning_rate': 0.0009070450097847358, 'epoch': 0.93}
+Time elapsed since training started:  1 Hours 42 Mins 24.860534 Sec
+{'loss': 0.7981, 'learning_rate': 0.0009021526418786693, 'epoch': 0.98}
+Time elapsed since training started:  1 Hours 47 Mins 51.334283 Sec
+{'loss': 0.7974, 'learning_rate': 0.0008972602739726028, 'epoch': 1.03}
+Time elapsed since training started:  1 Hours 53 Mins 10.922627 Sec
+{'loss': 0.7974, 'learning_rate': 0.0008923679060665362, 'epoch': 1.08}
+Time elapsed since training started:  1 Hours 58 Mins 34.344701 Sec
+{'loss': 0.7971, 'learning_rate': 0.0008874755381604696, 'epoch': 1.13}
+Time elapsed since training started:  2 Hours 03 Mins 48.704727 Sec
+{'loss': 0.7972, 'learning_rate': 0.0008825831702544032, 'epoch': 1.17}
+Time elapsed since training started:  2 Hours 09 Mins 09.440180 Sec
+{'loss': 0.797, 'learning_rate': 0.0008776908023483366, 'epoch': 1.22}
+Time elapsed since training started:  2 Hours 14 Mins 31.883865 Sec
+{'loss': 0.7969, 'learning_rate': 0.0008727984344422701, 'epoch': 1.27}
+Time elapsed since training started:  2 Hours 19 Mins 54.730376 Sec
+{'loss': 0.7968, 'learning_rate': 0.0008679060665362035, 'epoch': 1.32}
+Time elapsed since training started:  2 Hours 25 Mins 08.547475 Sec
+{'loss': 0.7966, 'learning_rate': 0.000863013698630137, 'epoch': 1.37}
+Time elapsed since training started:  2 Hours 30 Mins 30.812421 Sec
+{'loss': 0.7965, 'learning_rate': 0.0008581213307240705, 'epoch': 1.42}
+Time elapsed since training started:  2 Hours 35 Mins 53.278609 Sec
+{'loss': 0.7966, 'learning_rate': 0.0008532289628180039, 'epoch': 1.47}
+Time elapsed since training started:  2 Hours 41 Mins 15.569842 Sec
+{'loss': 0.7963, 'learning_rate': 0.0008483365949119374, 'epoch': 1.52}
+Time elapsed since training started:  2 Hours 46 Mins 38.222634 Sec
+{'loss': 0.7963, 'learning_rate': 0.0008434442270058709, 'epoch': 1.57}
+Time elapsed since training started:  2 Hours 51 Mins 52.494152 Sec
+{'loss': 0.7962, 'learning_rate': 0.0008385518590998044, 'epoch': 1.61}
+Time elapsed since training started:  2 Hours 57 Mins 14.780195 Sec
+{'loss': 0.7961, 'learning_rate': 0.0008336594911937378, 'epoch': 1.66}
+Time elapsed since training started:  3 Hours 02 Mins 37.568521 Sec
+{'loss': 0.7962, 'learning_rate': 0.0008287671232876712, 'epoch': 1.71}
+Time elapsed since training started:  3 Hours 07 Mins 59.800487 Sec
+{'loss': 0.7961, 'learning_rate': 0.0008238747553816048, 'epoch': 1.76}
+Time elapsed since training started:  3 Hours 13 Mins 13.991129 Sec
+{'loss': 0.796, 'learning_rate': 0.0008189823874755382, 'epoch': 1.81}
+Time elapsed since training started:  3 Hours 18 Mins 36.971166 Sec
+{'loss': 0.7959, 'learning_rate': 0.0008140900195694716, 'epoch': 1.86}
+Time elapsed since training started:  3 Hours 23 Mins 59.317028 Sec
+{'loss': 0.7959, 'learning_rate': 0.0008091976516634051, 'epoch': 1.91}
+Time elapsed since training started:  3 Hours 29 Mins 22.259032 Sec
+{'loss': 0.7958, 'learning_rate': 0.0008043052837573385, 'epoch': 1.96}
+Time elapsed since training started:  3 Hours 34 Mins 44.172909 Sec
+{'loss': 0.7958, 'learning_rate': 0.0007994129158512721, 'epoch': 2.01}
+Time elapsed since training started:  3 Hours 39 Mins 51.325389 Sec
+{'loss': 0.7958, 'learning_rate': 0.0007945205479452054, 'epoch': 2.05}
+Time elapsed since training started:  3 Hours 45 Mins 14.609624 Sec
+{'loss': 0.7959, 'learning_rate': 0.000789628180039139, 'epoch': 2.1}
+Time elapsed since training started:  3 Hours 50 Mins 37.048280 Sec
+{'loss': 0.7957, 'learning_rate': 0.0007847358121330724, 'epoch': 2.15}
+Time elapsed since training started:  3 Hours 56 Mins 00.355203 Sec
+{'loss': 0.7961, 'learning_rate': 0.0007798434442270059, 'epoch': 2.2}
+Time elapsed since training started:  4 Hours 01 Mins 14.654235 Sec
+{'loss': 0.7958, 'learning_rate': 0.0007749510763209393, 'epoch': 2.25}
+Time elapsed since training started:  4 Hours 06 Mins 40.073702 Sec
+{'loss': 0.7957, 'learning_rate': 0.0007700587084148728, 'epoch': 2.3}
+Time elapsed since training started:  4 Hours 12 Mins 03.645123 Sec
+{'loss': 0.7958, 'learning_rate': 0.0007651663405088063, 'epoch': 2.35}
+Time elapsed since training started:  4 Hours 17 Mins 28.697390 Sec
+{'loss': 0.7956, 'learning_rate': 0.0007602739726027398, 'epoch': 2.4}
+Time elapsed since training started:  4 Hours 22 Mins 52.296735 Sec
+{'loss': 0.7957, 'learning_rate': 0.0007553816046966731, 'epoch': 2.45}
+Time elapsed since training started:  4 Hours 28 Mins 06.688506 Sec
+{'loss': 0.7956, 'learning_rate': 0.0007504892367906067, 'epoch': 2.5}
+Time elapsed since training started:  4 Hours 33 Mins 29.887884 Sec
+{'loss': 0.7957, 'learning_rate': 0.0007455968688845401, 'epoch': 2.54}
+Time elapsed since training started:  4 Hours 38 Mins 53.248516 Sec
+{'loss': 0.7955, 'learning_rate': 0.0007407045009784737, 'epoch': 2.59}
+Time elapsed since training started:  4 Hours 44 Mins 15.531643 Sec
+{'loss': 0.7955, 'learning_rate': 0.000735812133072407, 'epoch': 2.64}
+Time elapsed since training started:  4 Hours 49 Mins 30.738476 Sec
+{'loss': 0.7955, 'learning_rate': 0.0007309197651663405, 'epoch': 2.69}
+Time elapsed since training started:  4 Hours 54 Mins 54.466568 Sec
+{'loss': 0.7954, 'learning_rate': 0.000726027397260274, 'epoch': 2.74}
+Time elapsed since training started:  5 Hours 00 Mins 18.242960 Sec
+{'loss': 0.7955, 'learning_rate': 0.0007211350293542075, 'epoch': 2.79}
+Time elapsed since training started:  5 Hours 05 Mins 40.761669 Sec
+{'loss': 0.7954, 'learning_rate': 0.0007162426614481409, 'epoch': 2.84}
+Time elapsed since training started:  5 Hours 11 Mins 03.933043 Sec
+{'loss': 0.7954, 'learning_rate': 0.0007113502935420744, 'epoch': 2.89}
+Time elapsed since training started:  5 Hours 16 Mins 19.240418 Sec
+{'loss': 0.7953, 'learning_rate': 0.0007064579256360079, 'epoch': 2.94}
+Time elapsed since training started:  5 Hours 21 Mins 42.486881 Sec
+{'loss': 0.7954, 'learning_rate': 0.0007015655577299414, 'epoch': 2.98}
+Time elapsed since training started:  5 Hours 27 Mins 05.015827 Sec
+{'loss': 0.7954, 'learning_rate': 0.0006966731898238747, 'epoch': 3.03}
+Time elapsed since training started:  5 Hours 32 Mins 21.703276 Sec
+{'loss': 0.7953, 'learning_rate': 0.0006917808219178082, 'epoch': 3.08}
+Time elapsed since training started:  5 Hours 37 Mins 37.934340 Sec
+{'loss': 0.7953, 'learning_rate': 0.0006868884540117417, 'epoch': 3.13}
+Time elapsed since training started:  5 Hours 43 Mins 01.026204 Sec
+{'loss': 0.7953, 'learning_rate': 0.0006819960861056753, 'epoch': 3.18}
+Time elapsed since training started:  5 Hours 48 Mins 24.188504 Sec
+{'loss': 0.7953, 'learning_rate': 0.0006771037181996086, 'epoch': 3.23}
+Time elapsed since training started:  5 Hours 53 Mins 48.687903 Sec
+{'loss': 0.7954, 'learning_rate': 0.000672211350293542, 'epoch': 3.28}
+Time elapsed since training started:  5 Hours 59 Mins 02.959933 Sec
+{'loss': 0.7954, 'learning_rate': 0.0006673189823874756, 'epoch': 3.33}
+Time elapsed since training started:  6 Hours 04 Mins 25.243085 Sec
+{'loss': 0.7953, 'learning_rate': 0.000662426614481409, 'epoch': 3.38}
+Time elapsed since training started:  6 Hours 09 Mins 48.059419 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006575342465753425, 'epoch': 3.42}
+Time elapsed since training started:  6 Hours 15 Mins 11.503437 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006526418786692759, 'epoch': 3.47}
+Time elapsed since training started:  6 Hours 20 Mins 34.893822 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006477495107632094, 'epoch': 3.52}
+Time elapsed since training started:  6 Hours 25 Mins 50.102509 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006428571428571429, 'epoch': 3.57}
+Time elapsed since training started:  6 Hours 31 Mins 13.983407 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006379647749510763, 'epoch': 3.62}
+Time elapsed since training started:  6 Hours 36 Mins 37.879042 Sec
+{'loss': 0.7948, 'learning_rate': 0.0006330724070450098, 'epoch': 3.67}
+Time elapsed since training started:  6 Hours 42 Mins 01.826149 Sec
+{'loss': 0.7967, 'learning_rate': 0.0006281800391389433, 'epoch': 3.72}
+Time elapsed since training started:  6 Hours 47 Mins 17.067097 Sec
+{'loss': 0.7952, 'learning_rate': 0.0006232876712328768, 'epoch': 3.77}
+Time elapsed since training started:  6 Hours 52 Mins 40.630461 Sec
+{'loss': 0.7868, 'learning_rate': 0.0006183953033268102, 'epoch': 3.82}
+Time elapsed since training started:  6 Hours 58 Mins 04.103747 Sec
+{'loss': 0.773, 'learning_rate': 0.0006135029354207436, 'epoch': 3.86}
+Time elapsed since training started:  7 Hours 03 Mins 28.862323 Sec
+{'loss': 0.7447, 'learning_rate': 0.0006086105675146772, 'epoch': 3.91}
+Time elapsed since training started:  7 Hours 08 Mins 54.399536 Sec
+{'loss': 0.7125, 'learning_rate': 0.0006037181996086106, 'epoch': 3.96}
+Time elapsed since training started:  7 Hours 14 Mins 11.948637 Sec
+{'loss': 0.6755, 'learning_rate': 0.0005988258317025441, 'epoch': 4.01}
+Time elapsed since training started:  7 Hours 19 Mins 32.235917 Sec
+{'loss': 0.6207, 'learning_rate': 0.0005939334637964775, 'epoch': 4.06}
+Time elapsed since training started:  7 Hours 24 Mins 58.983067 Sec
+{'loss': 0.5645, 'learning_rate': 0.000589041095890411, 'epoch': 4.11}
+Time elapsed since training started:  7 Hours 30 Mins 25.709969 Sec
+{'loss': 0.5013, 'learning_rate': 0.0005841487279843445, 'epoch': 4.16}
+Time elapsed since training started:  7 Hours 35 Mins 44.319218 Sec
+{'loss': 0.4289, 'learning_rate': 0.0005792563600782778, 'epoch': 4.21}
+Time elapsed since training started:  7 Hours 41 Mins 11.510165 Sec
+{'loss': 0.3674, 'learning_rate': 0.0005743639921722114, 'epoch': 4.26}
+Time elapsed since training started:  7 Hours 46 Mins 38.527194 Sec
+{'loss': 0.3161, 'learning_rate': 0.0005694716242661449, 'epoch': 4.31}
+Time elapsed since training started:  7 Hours 52 Mins 05.485165 Sec
+{'loss': 0.272, 'learning_rate': 0.0005645792563600783, 'epoch': 4.35}
+Time elapsed since training started:  7 Hours 57 Mins 32.742359 Sec
+{'loss': 0.2423, 'learning_rate': 0.0005596868884540117, 'epoch': 4.4}
+Time elapsed since training started:  8 Hours 02 Mins 50.974795 Sec
+{'loss': 0.2171, 'learning_rate': 0.0005547945205479452, 'epoch': 4.45}
+Time elapsed since training started:  8 Hours 08 Mins 17.199840 Sec
+{'loss': 0.198, 'learning_rate': 0.0005499021526418787, 'epoch': 4.5}
+Time elapsed since training started:  8 Hours 13 Mins 43.480226 Sec
+{'loss': 0.1835, 'learning_rate': 0.0005450097847358122, 'epoch': 4.55}
+Time elapsed since training started:  8 Hours 19 Mins 09.581664 Sec
+{'loss': 0.1701, 'learning_rate': 0.0005401174168297455, 'epoch': 4.6}
+Time elapsed since training started:  8 Hours 24 Mins 26.015903 Sec
+{'loss': 0.1606, 'learning_rate': 0.0005352250489236791, 'epoch': 4.65}
+Time elapsed since training started:  8 Hours 29 Mins 48.674619 Sec
+{'loss': 0.1509, 'learning_rate': 0.0005303326810176125, 'epoch': 4.7}
+Time elapsed since training started:  8 Hours 35 Mins 11.208469 Sec
+{'loss': 0.1433, 'learning_rate': 0.0005254403131115461, 'epoch': 4.75}
+Time elapsed since training started:  8 Hours 40 Mins 32.445573 Sec
+{'loss': 0.1368, 'learning_rate': 0.0005205479452054794, 'epoch': 4.79}
+Time elapsed since training started:  8 Hours 45 Mins 55.255964 Sec
+{'loss': 0.1305, 'learning_rate': 0.0005156555772994129, 'epoch': 4.84}
+Time elapsed since training started:  8 Hours 51 Mins 09.091721 Sec
+{'loss': 0.1262, 'learning_rate': 0.0005107632093933464, 'epoch': 4.89}
+Time elapsed since training started:  8 Hours 56 Mins 31.053550 Sec
+{'loss': 0.1215, 'learning_rate': 0.0005058708414872799, 'epoch': 4.94}
+Time elapsed since training started:  9 Hours 01 Mins 53.289665 Sec
+{'loss': 0.1179, 'learning_rate': 0.0005009784735812133, 'epoch': 4.99}
+Time elapsed since training started:  9 Hours 07 Mins 15.373981 Sec
+{'loss': 0.1148, 'learning_rate': 0.0004960861056751468, 'epoch': 5.04}
+Time elapsed since training started:  9 Hours 12 Mins 22.476392 Sec
+{'loss': 0.1118, 'learning_rate': 0.0004911937377690802, 'epoch': 5.09}
+Time elapsed since training started:  9 Hours 17 Mins 45.587934 Sec
+{'loss': 0.1105, 'learning_rate': 0.0004863013698630137, 'epoch': 5.14}
+Time elapsed since training started:  9 Hours 23 Mins 08.382171 Sec
+{'loss': 0.1059, 'learning_rate': 0.00048140900195694716, 'epoch': 5.19}
+Time elapsed since training started:  9 Hours 28 Mins 31.252896 Sec
+{'loss': 0.103, 'learning_rate': 0.00047651663405088066, 'epoch': 5.23}
+Time elapsed since training started:  9 Hours 33 Mins 45.730189 Sec
+{'loss': 0.1008, 'learning_rate': 0.00047162426614481406, 'epoch': 5.28}
+Time elapsed since training started:  9 Hours 39 Mins 08.309900 Sec
+{'loss': 0.099, 'learning_rate': 0.00046673189823874756, 'epoch': 5.33}
+Time elapsed since training started:  9 Hours 44 Mins 30.636688 Sec
+{'loss': 0.0974, 'learning_rate': 0.000461839530332681, 'epoch': 5.38}
+Time elapsed since training started:  9 Hours 49 Mins 53.069105 Sec
+{'loss': 0.0967, 'learning_rate': 0.0004569471624266145, 'epoch': 5.43}
+Time elapsed since training started:  9 Hours 55 Mins 16.042937 Sec
+{'loss': 0.0944, 'learning_rate': 0.00045205479452054795, 'epoch': 5.48}
+Time elapsed since training started:  10 Hours 00 Mins 31.163122 Sec
+{'loss': 0.0925, 'learning_rate': 0.0004471624266144814, 'epoch': 5.53}
+Time elapsed since training started:  10 Hours 05 Mins 54.410022 Sec
+{'loss': 0.0917, 'learning_rate': 0.00044227005870841484, 'epoch': 5.58}
+Time elapsed since training started:  10 Hours 11 Mins 17.240194 Sec
+{'loss': 0.0894, 'learning_rate': 0.00043737769080234835, 'epoch': 5.63}
+Time elapsed since training started:  10 Hours 16 Mins 39.620344 Sec
+{'loss': 0.0877, 'learning_rate': 0.0004324853228962818, 'epoch': 5.68}
+Time elapsed since training started:  10 Hours 21 Mins 53.488165 Sec
+{'loss': 0.0864, 'learning_rate': 0.0004275929549902153, 'epoch': 5.72}
+Time elapsed since training started:  10 Hours 27 Mins 15.990999 Sec
+{'loss': 0.0852, 'learning_rate': 0.00042270058708414874, 'epoch': 5.77}
+Time elapsed since training started:  10 Hours 32 Mins 38.019165 Sec
+{'loss': 0.0844, 'learning_rate': 0.0004178082191780822, 'epoch': 5.82}
+Time elapsed since training started:  10 Hours 37 Mins 59.659080 Sec
+{'loss': 0.0832, 'learning_rate': 0.00041291585127201563, 'epoch': 5.87}
+Time elapsed since training started:  10 Hours 43 Mins 21.260374 Sec
+{'loss': 0.0823, 'learning_rate': 0.00040802348336594913, 'epoch': 5.92}
+Time elapsed since training started:  10 Hours 48 Mins 34.916215 Sec
+{'loss': 0.0812, 'learning_rate': 0.0004031311154598826, 'epoch': 5.97}
+Time elapsed since training started:  10 Hours 53 Mins 56.839008 Sec
+{'loss': 0.08, 'learning_rate': 0.0003982387475538161, 'epoch': 6.02}
+Time elapsed since training started:  10 Hours 59 Mins 12.090074 Sec
+{'loss': 0.0791, 'learning_rate': 0.0003933463796477495, 'epoch': 6.07}
+Time elapsed since training started:  11 Hours 04 Mins 34.360374 Sec
+{'loss': 0.0784, 'learning_rate': 0.000388454011741683, 'epoch': 6.12}
+Time elapsed since training started:  11 Hours 09 Mins 48.557613 Sec
+{'loss': 0.0775, 'learning_rate': 0.0003835616438356164, 'epoch': 6.16}
+Time elapsed since training started:  11 Hours 15 Mins 10.704373 Sec
+{'loss': 0.0768, 'learning_rate': 0.0003786692759295499, 'epoch': 6.21}
+Time elapsed since training started:  11 Hours 20 Mins 33.260363 Sec
+{'loss': 0.0762, 'learning_rate': 0.00037377690802348337, 'epoch': 6.26}
+Time elapsed since training started:  11 Hours 25 Mins 55.634128 Sec
+{'loss': 0.0754, 'learning_rate': 0.00036888454011741687, 'epoch': 6.31}
+Time elapsed since training started:  11 Hours 31 Mins 17.803068 Sec
+{'loss': 0.0742, 'learning_rate': 0.00036399217221135026, 'epoch': 6.36}
+Time elapsed since training started:  11 Hours 36 Mins 32.326082 Sec
+{'loss': 0.0735, 'learning_rate': 0.00035909980430528376, 'epoch': 6.41}
+Time elapsed since training started:  11 Hours 41 Mins 55.108609 Sec
+{'loss': 0.0732, 'learning_rate': 0.0003542074363992172, 'epoch': 6.46}
+Time elapsed since training started:  11 Hours 47 Mins 17.713960 Sec
+{'loss': 0.0721, 'learning_rate': 0.0003493150684931507, 'epoch': 6.51}
+Time elapsed since training started:  11 Hours 52 Mins 40.725641 Sec
+{'loss': 0.0715, 'learning_rate': 0.00034442270058708416, 'epoch': 6.56}
+Time elapsed since training started:  11 Hours 57 Mins 55.754356 Sec
+{'loss': 0.0713, 'learning_rate': 0.0003395303326810176, 'epoch': 6.6}
+Time elapsed since training started:  12 Hours 03 Mins 18.618857 Sec
+{'loss': 0.0708, 'learning_rate': 0.00033463796477495105, 'epoch': 6.65}
+Time elapsed since training started:  12 Hours 08 Mins 41.645344 Sec
+{'loss': 0.0705, 'learning_rate': 0.00032974559686888455, 'epoch': 6.7}
+Time elapsed since training started:  12 Hours 14 Mins 04.016287 Sec
+{'loss': 0.0693, 'learning_rate': 0.000324853228962818, 'epoch': 6.75}
+Time elapsed since training started:  12 Hours 19 Mins 27.454618 Sec
+{'loss': 0.0692, 'learning_rate': 0.0003199608610567515, 'epoch': 6.8}
+Time elapsed since training started:  12 Hours 24 Mins 42.594524 Sec
+{'loss': 0.0687, 'learning_rate': 0.00031506849315068495, 'epoch': 6.85}
+Time elapsed since training started:  12 Hours 30 Mins 04.747544 Sec
+{'loss': 0.0684, 'learning_rate': 0.0003101761252446184, 'epoch': 6.9}
+Time elapsed since training started:  12 Hours 35 Mins 27.358429 Sec
+{'loss': 0.0676, 'learning_rate': 0.00030528375733855184, 'epoch': 6.95}
+Time elapsed since training started:  12 Hours 40 Mins 50.388395 Sec
+{'loss': 0.0674, 'learning_rate': 0.00030039138943248534, 'epoch': 7.0}
+Time elapsed since training started:  12 Hours 46 Mins 04.404374 Sec
+{'loss': 0.0666, 'learning_rate': 0.0002954990215264188, 'epoch': 7.05}
+Time elapsed since training started:  12 Hours 51 Mins 19.648980 Sec
+{'loss': 0.0664, 'learning_rate': 0.0002906066536203523, 'epoch': 7.09}
+Time elapsed since training started:  12 Hours 56 Mins 41.786604 Sec
+{'loss': 0.0659, 'learning_rate': 0.0002857142857142857, 'epoch': 7.14}
+Time elapsed since training started:  13 Hours 02 Mins 03.182774 Sec
+{'loss': 0.0652, 'learning_rate': 0.0002808219178082192, 'epoch': 7.19}
+Time elapsed since training started:  13 Hours 07 Mins 17.032048 Sec
+{'loss': 0.0649, 'learning_rate': 0.00027592954990215263, 'epoch': 7.24}
+Time elapsed since training started:  13 Hours 12 Mins 39.372672 Sec
+{'loss': 0.0646, 'learning_rate': 0.00027103718199608613, 'epoch': 7.29}
+Time elapsed since training started:  13 Hours 18 Mins 02.586992 Sec
+{'loss': 0.0645, 'learning_rate': 0.0002661448140900196, 'epoch': 7.34}
+Time elapsed since training started:  13 Hours 23 Mins 25.847736 Sec
+{'loss': 0.0641, 'learning_rate': 0.0002612524461839531, 'epoch': 7.39}
+Time elapsed since training started:  13 Hours 28 Mins 47.687604 Sec
+{'loss': 0.0635, 'learning_rate': 0.00025636007827788647, 'epoch': 7.44}
+Time elapsed since training started:  13 Hours 34 Mins 02.569313 Sec
+{'loss': 0.0632, 'learning_rate': 0.00025146771037181997, 'epoch': 7.49}
+Time elapsed since training started:  13 Hours 39 Mins 25.681345 Sec
+{'loss': 0.0628, 'learning_rate': 0.0002465753424657534, 'epoch': 7.53}
+Time elapsed since training started:  13 Hours 44 Mins 48.818526 Sec
+{'loss': 0.0627, 'learning_rate': 0.0002416829745596869, 'epoch': 7.58}
+Time elapsed since training started:  13 Hours 50 Mins 11.480788 Sec
+{'loss': 0.0626, 'learning_rate': 0.00023679060665362034, 'epoch': 7.63}
+Time elapsed since training started:  13 Hours 55 Mins 26.160411 Sec
+{'loss': 0.0621, 'learning_rate': 0.0002318982387475538, 'epoch': 7.68}
+Time elapsed since training started:  14 Hours 00 Mins 48.672898 Sec
+{'loss': 0.0621, 'learning_rate': 0.00022700587084148726, 'epoch': 7.73}
+Time elapsed since training started:  14 Hours 06 Mins 11.415805 Sec
+{'loss': 0.0613, 'learning_rate': 0.00022211350293542073, 'epoch': 7.78}
+Time elapsed since training started:  14 Hours 11 Mins 33.718695 Sec
+{'loss': 0.0613, 'learning_rate': 0.0002172211350293542, 'epoch': 7.83}
+Time elapsed since training started:  14 Hours 16 Mins 57.242554 Sec
+{'loss': 0.0609, 'learning_rate': 0.00021232876712328765, 'epoch': 7.88}
+Time elapsed since training started:  14 Hours 22 Mins 14.712841 Sec
+{'loss': 0.0604, 'learning_rate': 0.00020743639921722113, 'epoch': 7.93}
+Time elapsed since training started:  14 Hours 27 Mins 38.844653 Sec
+{'loss': 0.0602, 'learning_rate': 0.0002025440313111546, 'epoch': 7.97}
+Time elapsed since training started:  14 Hours 33 Mins 01.183379 Sec
+{'loss': 0.0602, 'learning_rate': 0.00019765166340508805, 'epoch': 8.02}
+Time elapsed since training started:  14 Hours 38 Mins 21.061685 Sec
+{'loss': 0.06, 'learning_rate': 0.00019275929549902152, 'epoch': 8.07}
+Time elapsed since training started:  14 Hours 43 Mins 35.924997 Sec
+{'loss': 0.0597, 'learning_rate': 0.000187866927592955, 'epoch': 8.12}
+Time elapsed since training started:  14 Hours 49 Mins 25.957763 Sec
+{'loss': 0.0595, 'learning_rate': 0.00018297455968688844, 'epoch': 8.17}
+Time elapsed since training started:  14 Hours 54 Mins 50.225285 Sec
+{'loss': 0.0591, 'learning_rate': 0.00017808219178082192, 'epoch': 8.22}
+Time elapsed since training started:  15 Hours 00 Mins 15.703537 Sec
+{'loss': 0.0589, 'learning_rate': 0.00017318982387475536, 'epoch': 8.27}
+Time elapsed since training started:  15 Hours 05 Mins 39.299182 Sec
+{'loss': 0.0588, 'learning_rate': 0.00016829745596868884, 'epoch': 8.32}
+Time elapsed since training started:  15 Hours 10 Mins 55.138309 Sec
+{'loss': 0.0586, 'learning_rate': 0.0001634050880626223, 'epoch': 8.37}
+Time elapsed since training started:  15 Hours 16 Mins 20.955264 Sec
+{'loss': 0.0582, 'learning_rate': 0.00015851272015655576, 'epoch': 8.41}
+Time elapsed since training started:  15 Hours 21 Mins 47.357186 Sec
+{'loss': 0.0582, 'learning_rate': 0.00015362035225048923, 'epoch': 8.46}
+Time elapsed since training started:  15 Hours 27 Mins 10.233239 Sec
+{'loss': 0.058, 'learning_rate': 0.0001487279843444227, 'epoch': 8.51}
+Time elapsed since training started:  15 Hours 32 Mins 25.378971 Sec
+{'loss': 0.0576, 'learning_rate': 0.00014383561643835615, 'epoch': 8.56}
+Time elapsed since training started:  15 Hours 37 Mins 50.288913 Sec
+{'loss': 0.0575, 'learning_rate': 0.00013894324853228963, 'epoch': 8.61}
+Time elapsed since training started:  15 Hours 43 Mins 16.663472 Sec
+{'loss': 0.0576, 'learning_rate': 0.0001340508806262231, 'epoch': 8.66}
+Time elapsed since training started:  15 Hours 48 Mins 40.003672 Sec
+{'loss': 0.0572, 'learning_rate': 0.00012915851272015655, 'epoch': 8.71}
+Time elapsed since training started:  15 Hours 54 Mins 02.380310 Sec
+{'loss': 0.0571, 'learning_rate': 0.00012426614481409002, 'epoch': 8.76}
+Time elapsed since training started:  15 Hours 59 Mins 16.678850 Sec
+{'loss': 0.0571, 'learning_rate': 0.00011937377690802348, 'epoch': 8.81}
+Time elapsed since training started:  16 Hours 04 Mins 38.743720 Sec
+{'loss': 0.0567, 'learning_rate': 0.00011448140900195694, 'epoch': 8.86}
+Time elapsed since training started:  16 Hours 10 Mins 01.992083 Sec
+{'loss': 0.0567, 'learning_rate': 0.0001095890410958904, 'epoch': 8.9}
+Time elapsed since training started:  16 Hours 15 Mins 29.533985 Sec
+{'loss': 0.0565, 'learning_rate': 0.00010469667318982387, 'epoch': 8.95}
+Time elapsed since training started:  16 Hours 20 Mins 48.576360 Sec
+{'loss': 0.0563, 'learning_rate': 9.980430528375733e-05, 'epoch': 9.0}
+Time elapsed since training started:  16 Hours 26 Mins 06.371859 Sec
+{'loss': 0.0561, 'learning_rate': 9.49119373776908e-05, 'epoch': 9.05}
+Time elapsed since training started:  16 Hours 31 Mins 32.271427 Sec
+{'loss': 0.0561, 'learning_rate': 9.001956947162427e-05, 'epoch': 9.1}
+Time elapsed since training started:  16 Hours 36 Mins 55.962009 Sec
+{'loss': 0.056, 'learning_rate': 8.512720156555773e-05, 'epoch': 9.15}
+Time elapsed since training started:  16 Hours 42 Mins 12.278051 Sec
+{'loss': 0.056, 'learning_rate': 8.023483365949119e-05, 'epoch': 9.2}
+Time elapsed since training started:  16 Hours 47 Mins 38.890618 Sec
+{'loss': 0.056, 'learning_rate': 7.534246575342465e-05, 'epoch': 9.25}
+Time elapsed since training started:  16 Hours 53 Mins 04.111745 Sec
+{'loss': 0.0555, 'learning_rate': 7.045009784735812e-05, 'epoch': 9.3}
+Time elapsed since training started:  16 Hours 58 Mins 30.483703 Sec
+{'loss': 0.0555, 'learning_rate': 6.555772994129158e-05, 'epoch': 9.34}
+Time elapsed since training started:  17 Hours 03 Mins 56.752693 Sec
+{'loss': 0.0553, 'learning_rate': 6.0665362035225044e-05, 'epoch': 9.39}
+Time elapsed since training started:  17 Hours 09 Mins 15.549059 Sec
+{'loss': 0.0554, 'learning_rate': 5.577299412915851e-05, 'epoch': 9.44}
+Time elapsed since training started:  17 Hours 14 Mins 42.146814 Sec
+{'loss': 0.0553, 'learning_rate': 5.088062622309198e-05, 'epoch': 9.49}
+Time elapsed since training started:  17 Hours 20 Mins 08.412884 Sec
+{'loss': 0.0554, 'learning_rate': 4.598825831702544e-05, 'epoch': 9.54}
+Time elapsed since training started:  17 Hours 25 Mins 34.088135 Sec
+{'loss': 0.0552, 'learning_rate': 4.1095890410958905e-05, 'epoch': 9.59}
+Time elapsed since training started:  17 Hours 30 Mins 49.580705 Sec
+{'loss': 0.0551, 'learning_rate': 3.6203522504892366e-05, 'epoch': 9.64}
+Time elapsed since training started:  17 Hours 36 Mins 13.195513 Sec
+{'loss': 0.055, 'learning_rate': 3.131115459882583e-05, 'epoch': 9.69}
+Time elapsed since training started:  17 Hours 41 Mins 39.531307 Sec
+{'loss': 0.055, 'learning_rate': 2.6418786692759296e-05, 'epoch': 9.74}
+Time elapsed since training started:  17 Hours 47 Mins 05.892637 Sec
+{'loss': 0.0549, 'learning_rate': 2.152641878669276e-05, 'epoch': 9.78}
+Time elapsed since training started:  17 Hours 52 Mins 34.635570 Sec
+{'loss': 0.0549, 'learning_rate': 1.6634050880626224e-05, 'epoch': 9.83}
+Time elapsed since training started:  17 Hours 57 Mins 53.634774 Sec
+{'loss': 0.055, 'learning_rate': 1.1741682974559687e-05, 'epoch': 9.88}
+Time elapsed since training started:  18 Hours 03 Mins 20.949325 Sec
+{'loss': 0.0546, 'learning_rate': 6.84931506849315e-06, 'epoch': 9.93}
+Time elapsed since training started:  18 Hours 08 Mins 47.839242 Sec
+{'loss': 0.0547, 'learning_rate': 1.9569471624266145e-06, 'epoch': 9.98}
+Time elapsed since training started:  18 Hours 14 Mins 13.817620 Sec
+{'train_runtime': 65751.3958, 'train_samples_per_second': 5085.933, 'train_steps_per_second': 0.078, 'train_loss': 0.3813527638081702, 'epoch': 10.0}
+Training finished.
+Time elapsed since training started:  18 Hours 15 Mins 59.768700 Sec
